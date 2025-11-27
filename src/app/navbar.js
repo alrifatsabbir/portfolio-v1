@@ -18,7 +18,7 @@ const socialItems = [
 
 export default function Navbar() {
   return (
-    <StaggeredMenu 
+    <StaggeredMenu
       position="right"
       items={menuItems}
       socialItems={socialItems}
@@ -28,7 +28,6 @@ export default function Navbar() {
       openMenuButtonColor="#123"
       changeMenuColorOnOpen={true}
       colors={['rgba(16, 185, 129, 0.25)', 'rgba(16, 185, 129, 0.75)']}
-
       accentColor="#5227FF"
       isFixed={true}
       onMenuOpen={() => console.log('Menu opened')}

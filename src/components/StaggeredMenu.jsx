@@ -1,7 +1,6 @@
 "use client";
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import Image from 'next/image';
 export const StaggeredMenu = ({
   position = 'right',
   colors = ['#B19EEF', '#5227FF'],
@@ -353,7 +352,7 @@ export const StaggeredMenu = ({
 
           <button
             ref={toggleBtnRef}
-            className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-[#e9e9ef] font-medium leading-none overflow-visible pointer-events-auto"
+            className="sm-toggle cursor-target relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer text-[#e9e9ef] font-medium leading-none overflow-visible pointer-events-auto"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="staggered-menu-panel"
@@ -410,7 +409,7 @@ export const StaggeredMenu = ({
                       aria-label={it.ariaLabel}
                       data-index={idx + 1}>
                       <span
-                        className="sm-panel-itemLabel inline-block [transform-origin:50%_100%] will-change-transform">
+                        className="sm-panel-itemLabel cursor-target inline-block [transform-origin:50%_100%] will-change-transform">
                         {it.label}
                       </span>
                     </a>
@@ -446,7 +445,7 @@ export const StaggeredMenu = ({
                         href={s.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="sm-socials-link text-[1.2rem] font-medium text-[#111] no-underline relative inline-block py-[2px] transition-[color,opacity] duration-300 ease-linear">
+                        className="sm-socials-link text-[1.2rem] cursor-target font-medium text-[#111] no-underline relative inline-block py-[2px] transition-[color,opacity] duration-300 ease-linear">
                         {s.label}
                       </a>
                     </li>
